@@ -13,7 +13,7 @@
 <p>
   <strong>Imagem:</strong>
   <br />
-  <%= image_tag @coin.image_url, size: "25x25" %>
+  <%= image_tag @coin.image_url, size: "25x25" if @coin.image_url != nil %>
 </p>
 
 <%= link_to 'Editar', edit_coin_path(@coin) %> |
