@@ -1,15 +1,26 @@
 <h1>Seja bem vindo!</h1> 
-<ul>
-  <li>
-    <%= link_to "Cadastro de moedas", coins_path %>
-  </li>
-</ul>
+
+<%= render 'menu' %>
 
 <hr/>
 
 <p>Alguns exemplos de como usar o ERB</p>
+<strong>Usando código Ruby no HTML com ERB</strong>
 <% name = 'Jean' %>
 <h3>Olá, <%= name %>!</h3> 
 <p>Seu nome ao contrário é <%= name.reverse.downcase.capitalize %></p>
+<hr />
+
+<strong>Usando helpers para formatação de data</strong>
 <p><strong>A data de hoje é:</strong> <%= format_date_br Date.today %></p>
+<hr />
+
+<strong>Verificando ambiente Rails em conjunto de helpers</strong>
 <p>Você está em ambiente de <strong><%= rails_environment %></strong></p>
+<hr />
+
+<strong>Variáveis de instância/sessão</strong>
+<p>
+  Este é o curso <strong><%= @course %></strong>, ministrado pelo professor <strong><%= @teacher %></strong>.
+</p>
+<hr />
