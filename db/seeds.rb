@@ -21,16 +21,12 @@ initial_coins = [
     coin_name: 'Dash',
     acronym: 'DASH',
     image_url: 'https://seeklogo.com/images/D/dash-logo-4A14989CF5-seeklogo.com.png'
-  },
+  }
 ]
 
-puts 'Iniciando cadastro das moedas...'
+spinner = TTY::Spinner.new('[:spinner] Starting coin register...')
+spinner.auto_spin
 initial_coins.each do |coin|
-  Coin.create!(
-    coin_name: coin[:coin_name],
-    acronym: coin[:acronym],
-    image_url: coin[:image_url],
-  )
-  puts "Criada a moeda #{coin[:coin_name]}!"
+  Coin.find_or_create_by!(coin)
 end
-puts 'Moedas cadastradas com sucesso!'
+spinner.success('Coins registers successfully done!')

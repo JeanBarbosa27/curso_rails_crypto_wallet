@@ -11,7 +11,6 @@ namespace :dev do
     end
   end
 
-
   private
   def show_spinner(start_message, end_message = 'Successfully done!')
     spinner = TTY::Spinner.new("[:spinner] #{start_message}")
