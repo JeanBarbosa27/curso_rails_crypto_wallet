@@ -18,17 +18,20 @@ namespace :dev do
       {
         coin_name: 'Bitcoin',
         acronym: 'BTC',
-        image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRewQoPbineQHwaypFEwjsWZ_2IsEtc5UWEGtjvryuxJqFngZsfSq4lbPEbrubaUeuW_T0&usqp=CAU'
+        image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRewQoPbineQHwaypFEwjsWZ_2IsEtc5UWEGtjvryuxJqFngZsfSq4lbPEbrubaUeuW_T0&usqp=CAU',
+        mining_type: MiningType.find_by(acronym: 'PoW')
       },
       {
         coin_name: 'Ethereum',
         acronym: 'ETH',
-        image_url: 'https://tl.vhv.rs/dpng/s/420-4206472_fork-cryptocurrency-ethereum-bitcoin-classic-png-download-ethereum.png'
+        image_url: 'https://tl.vhv.rs/dpng/s/420-4206472_fork-cryptocurrency-ethereum-bitcoin-classic-png-download-ethereum.png',
+        mining_type: MiningType.all.sample
       },
       {
         coin_name: 'Dash',
         acronym: 'DASH',
-        image_url: 'https://seeklogo.com/images/D/dash-logo-4A14989CF5-seeklogo.com.png'
+        image_url: 'https://seeklogo.com/images/D/dash-logo-4A14989CF5-seeklogo.com.png',
+        mining_type: MiningType.all.sample
       }
     ]
 
