@@ -30,4 +30,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  confirms:
+    sure: 'Are you sure?'
+  hello: 'Hello world'
+  links:
+    add_new: 'Add new'
+    add_new_male: 'Add new'
+    show: 'Show'
+    edit: 'Edit'
+    delete: 'Delete'
+    go_back: 'Go Back'
+  models:
+    coin: 'Coin'
+    coins: 'Coins'
+    mining_type: 'Mining Type'
+    mining_types: 'Mining Types'
+  welcome: 'Welcome'

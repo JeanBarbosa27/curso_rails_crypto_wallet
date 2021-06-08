@@ -1,0 +1,17 @@
+pt-BR:
+  confirms:
+    sure: 'Você tem certeza?'
+  hello: 'Olá mundo'
+  links:
+    add_new: 'Adicionar nova'
+    add_new_male: 'Adicionar novo'
+    show: 'Mostrar'
+    edit: 'Editar'
+    delete: 'Apagar'
+    go_back: 'Voltar'
+  models:
+    coin: 'Moeda'
+    coins: 'Moedas'
+    mining_type: 'Tipo de mineração'
+    mining_types: 'Tipos de mineração'
+  welcome: 'Seja bem-vindo!'
