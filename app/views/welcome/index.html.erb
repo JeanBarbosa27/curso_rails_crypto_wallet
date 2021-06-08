@@ -1,4 +1,5 @@
-<h1>Seja bem vindo!</h1> 
+<p>Usando o método <code>I18n.t</code> para traduzir mensagens que são configuradas em <code>config/locales</code></p>
+<h1><%= t 'hello' %>, <%= t 'welcome' %></h1> 
 
 <%= render 'menu' %>
 
@@ -11,12 +12,15 @@
 <p>Seu nome ao contrário é <%= name.reverse.downcase.capitalize %></p>
 <hr />
 
-<h2>Usando helpers para formatação de data</h2>
-<p><strong>A data de hoje é:</strong> <%= format_date_br Date.today %></p>
+<h2>Formatação de data</h2>
+<p><strong>Através do uso de um helper:</strong> A data de hoje é: <%= format_date_br Date.today %></p>
+<p><strong>Através do uso do método <code>I18n.l()</code>:</strong> <%= l Date.today%></p>
 <hr />
 
+
 <h2>Verificando o idioma que está definido como padrão</h2>
-<p>O idioma padrão dessa aplicação é o <strong><%= show_language(I18n.locale) %></strong>.</p>
+<p>O idioma padrão dessa aplicação é o <strong><%= show_language %></strong>.</p>
+<hr />
 
 <h2>Verificando ambiente Rails em conjunto de helpers</h2>
 <p>Você está em ambiente de <strong><%= rails_environment %></strong></p>

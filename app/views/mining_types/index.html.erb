@@ -16,9 +16,11 @@
       <tr>
         <td><%= mining_type.type_name %></td>
         <td><%= mining_type.acronym %></td>
-        <td><%= link_to 'Show', mining_type %></td>
-        <td><%= link_to 'Edit', edit_mining_type_path(mining_type) %></td>
-        <td><%= link_to 'Destroy', mining_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('links.show'), mining_type %></td>
+        <td><%= link_to t('links.edit'), edit_mining_type_path(mining_type) %></td>
+        <td>
+          <%= link_to t('links.delete'), mining_type, method: :delete, data: { confirm: "#{t 'sure'}" } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Mining Type', new_mining_type_path %>
+<%= link_to "#{t 'links.add_new'} #{t 'models.mining_type'}", new_mining_type_path %>
