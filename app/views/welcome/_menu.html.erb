@@ -1,8 +1,8 @@
 <ul>
   <li>
-    <%= link_to "Coins registers", coins_path %>
+    <%= link_to "#{@coins.model_name.human(count: @coins.count)}", coins_path %>
   </li>
   <li>
-    <%= link_to "Mining Types registers", mining_types_path %>
+    <%= link_to "#{@mining_types.model_name.human(count: @mining_types.count)}", mining_types_path %>
   </li>
 </ul>
