@@ -9,9 +9,4 @@ pt-BR:
     edit: 'Editar'
     delete: 'Apagar'
     go_back: 'Voltar'
-  models:
-    coin: 'Moeda'
-    coins: 'Moedas'
-    mining_type: 'Tipo de mineração'
-    mining_types: 'Tipos de mineração'
   welcome: 'Seja bem-vindo!'
