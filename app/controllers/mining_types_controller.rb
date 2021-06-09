@@ -4,6 +4,7 @@ class MiningTypesController < ApplicationController
   # GET /mining_types or /mining_types.json
   def index
     @mining_types = MiningType.all
+    session[:mining_type_page_last_request_in] = l DateTime.now
   end
 
   # GET /mining_types/1 or /mining_types/1.json

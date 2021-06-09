@@ -31,3 +31,20 @@
   Este é o curso <strong><%= @course %></strong>, ministrado pelo professor <strong><%= @teacher %></strong>.
 </p>
 <hr />
+
+<h2>Acessando dados armazenados em cookies e session</h2>
+<p>
+<% if cookies[:coins_page_last_access_in]%>
+  <strong>Data do último acesso à página de Moedas:</strong> <%= cookies[:coins_page_last_access_in] %>
+<% else %>
+  <strong>Não há registro de acesso à página de Moedas</strong>
+<% end %>
+</p>
+<p>
+<% if session[:mining_type_page_last_request_in] %>
+  <strong>Data da última requisição dos Tipos de mineração:</strong> <%= session[:mining_type_page_last_request_in] %>
+<% else %>
+  <strong>Não há registro de requisição aos Tipos de mineração</strong>
+<% end %>
+</p>
+<hr />

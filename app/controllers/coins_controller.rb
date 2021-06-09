@@ -9,6 +9,7 @@ class CoinsController < ApplicationController
   # GET /coins.json
   def index
     @coins = Coin.all
+    cookies[:coins_page_last_access_in] = l DateTime.now
   end
 
   # GET /coins/1
