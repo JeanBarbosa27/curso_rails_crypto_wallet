@@ -1,0 +1,1 @@
+$.notify('Notificação funcionou!', 'success');
