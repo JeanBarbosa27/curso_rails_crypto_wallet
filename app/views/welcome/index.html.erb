@@ -1,9 +1,17 @@
-<p>Usando o método <code>I18n.t</code> para traduzir mensagens que são configuradas em <code>config/locales</code></p>
-<h1><%= t 'hello' %>, <%= t 'welcome' %></h1> 
-
-<%= render 'menu' %>
-
-<hr/>
+<div class="jumbotron">
+  <h1 class="display-4">
+    <%= t 'hello' %>, <%= t 'welcome' %>
+  </h1>
+  <p class="lead">
+    Este é o Crypto Wallet, uma app que você pode cadastrar e acompanhar suas criptmoedas.
+  </p>
+  <hr class="my-4">
+  <p>Para começar, selecione uma das opções abaixo:</p>
+  <p class="lead">
+    <%= link_to "#{@coins.model_name.human(count: @coins.count)}", coins_path, class: "btn btn-primary btn-lg", role: "button" %>
+    <%= link_to "#{@mining_types.model_name.human(count: @mining_types.count)}", mining_types_path, class: "btn btn-primary btn-lg", role: "button" %>
+  </p>
+</div>
 
 <p>Alguns exemplos de como usar o ERB</p>
 <h2>Usando código Ruby no HTML com ERB</h2>
