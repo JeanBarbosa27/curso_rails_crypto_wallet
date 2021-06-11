@@ -1,4 +1,6 @@
 pt-BR:
+  adding: 'Adicionando'
+  editing: 'Editando'
   greetings: 'Seja bem-vindo!'
   hello: 'Olá mundo'
   links:
@@ -8,8 +10,11 @@ pt-BR:
     edit: 'Editar'
     delete: 'Apagar'
     go_back: 'Voltar'
+  options:
+    select: 'Selecione...'    
   messages:
     confirm: 'Você tem certeza?'
     welcome_app_description: 'Este é o Crypto Wallet, uma app que você pode cadastrar e acompanhar suas criptmoedas.'
     welcome_choose_option: 'Para começar, selecione uma das opções abaixo:'
+  showing: 'Mostrando'
   using_language: 'Português do Brasil'

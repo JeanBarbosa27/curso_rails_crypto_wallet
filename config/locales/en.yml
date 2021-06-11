@@ -1,4 +1,6 @@
 en:
+  adding: 'Adding'
+  editing: 'Editing'
   greetings: 'Welcome!'
   hello: 'Hello World'
   links:
@@ -8,8 +10,11 @@ en:
     edit: 'Edit'
     delete: 'Delete'
     go_back: 'Go Back'
+  options:
+    select: 'Choose one...'
   messages:
     confirm: 'Are you sure?'
     welcome_app_description: 'This is Crypto Wallet, an app where you can register and follow up your cryptocoins.'
     welcome_choose_option: 'To start, choose an option bellow:'
+  showing: 'Showing'
   using_language: 'English (International)'
