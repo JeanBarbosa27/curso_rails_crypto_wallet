@@ -2,9 +2,19 @@
 
 <h1><%= t 'showing' %> <%= t @mining_type.model_name.human %></h1>
 
-<p><strong>Type name:</strong> <%= @mining_type.type_name %></p>
+<form>
+  <div class="form-group">
+    <%= label_tag nil, @mining_type.class.human_attribute_name(:type_name) %>
+    <%= text_field_tag nil, @mining_type.type_name, class: "form-control", disabled: true %>
+  </div>
 
-<p><strong>Acronym:</strong> <%= @mining_type.acronym %></p>
+  <div class="form-group">
+    <%= label_tag nil, @mining_type.class.human_attribute_name(:acronym) %>
+    <%= text_field_tag nil, @mining_type.acronym, class: "form-control", disabled: true %>
+  </div>
+
+</form>
+
 
 <p>
   <%= link_to t('links.edit'), edit_mining_type_path(@mining_type), class: "btn btn-primary" %>

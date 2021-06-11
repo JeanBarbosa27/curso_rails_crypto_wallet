@@ -2,28 +2,30 @@
 
 <h1><%= t 'showing' %> <%= t @coin.model_name.human %></h1>
 
-<p>
-  <strong>Nome da moeda:</strong>
-  <%= @coin.coin_name %>
-</p>
+<form>
+  <div class="form-group">
+    <%= label_tag nil, @coin.class.human_attribute_name(:coin_name) %>
+    <%= text_field_tag nil, @coin.coin_name, class: "form-control", disabled: true %>
+  </div>
 
-<p>
-  <strong>Sigla:</strong>
-  <%= @coin.acronym %>
-</p>
+  <div class="form-group">
+    <%= label_tag nil, @coin.class.human_attribute_name(:acronym) %>
+    <%= text_field_tag nil, @coin.acronym, class: "form-control", disabled: true %>
+  </div>
 
-<p>
-  <strong>Logo:</strong>
-  <%= image_tag @coin.image_url, size: "25x25" if @coin.image_url != nil %>
-</p>
+  <div class="form-group">
+    <%= label_tag nil, @coin.class.human_attribute_name(:image_url) %>
+    <%= image_tag @coin.image_url, width: 25, height: 25 if @coin.image_url != nil %>
+    <br>
+    <%= text_field_tag nil, @coin.class.human_attribute_name(:image_url), class: "form-control", disabled: true %>
+  </div>
 
-<% if @coin.mining_type_id %>
-<p>
-  <strong>Tipo de mineração</strong>
-  <br>
-  <%= @coin.mining_type.type_name %>
-</p>
-<% end %>
+  <div class="form-group">
+    <%= label_tag nil, @coin.class.human_attribute_name(:mining_type) %>
+    <%= text_field_tag nil, @coin.mining_type.type_name, class: "form-control", disabled: true %>
+  </div>
+
+</form>
 
 <%= link_to t('links.edit'), edit_coin_path(@coin), class: "btn btn-primary" %>
 <%= link_to t('links.go_back'), coins_path, class: "btn btn-secondary" %>
