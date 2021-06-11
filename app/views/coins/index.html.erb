@@ -23,7 +23,7 @@
         <td><%= link_to t('links.show'), coin %></td>
         <td><%= link_to t('links.edit'), edit_coin_path(coin) %></td>
         <td>
-          <%= link_to t('links.delete'), coin, method: :delete, data: { confirm: "#{t 'sure'}" } %>
+          <%= link_to t('links.delete'), coin, method: :delete, data: { confirm: "#{t 'messages.confirm'}" } %>
         </td>
       </tr>
     <% end %>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to "#{t 'links.add_new'} #{@coins.model_name.human}", new_coin_path %>
+<%= link_to "#{t 'links.add_new'} #{@coins.model_name.human}", new_coin_path, class: "btn btn-primary" %>

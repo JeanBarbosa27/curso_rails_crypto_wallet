@@ -19,7 +19,7 @@
         <td><%= link_to t('links.show'), mining_type %></td>
         <td><%= link_to t('links.edit'), edit_mining_type_path(mining_type) %></td>
         <td>
-          <%= link_to t('links.delete'), mining_type, method: :delete, data: { confirm: "#{t 'sure'}" } %>
+          <%= link_to t('links.delete'), mining_type, method: :delete, data: { confirm: "#{t 'messages.confirm'}" } %>
         </td>
       </tr>
     <% end %>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to "#{t 'links.add_new_male'} #{@mining_types.model_name.human}", new_mining_type_path %>
+<%= link_to "#{t 'links.add_new_male'} #{@mining_types.model_name.human}", new_mining_type_path, class: "btn btn-primary" %>

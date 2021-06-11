@@ -1,6 +1,4 @@
 pt-BR:
-  confirms:
-    sure: 'Você tem certeza?'
   greetings: 'Seja bem-vindo!'
   hello: 'Olá mundo'
   links:
@@ -11,6 +9,7 @@ pt-BR:
     delete: 'Apagar'
     go_back: 'Voltar'
   messages:
+    confirm: 'Você tem certeza?'
     welcome_app_description: 'Este é o Crypto Wallet, uma app que você pode cadastrar e acompanhar suas criptmoedas.'
     welcome_choose_option: 'Para começar, selecione uma das opções abaixo:'
   using_language: 'Português do Brasil'
