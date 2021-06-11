@@ -1,58 +1,57 @@
 <div class="jumbotron">
   <h1 class="display-4">
-    <%= t 'hello' %>, <%= t 'welcome' %>
+    <%= t 'greetings' %>
   </h1>
-  <p class="lead">
-    Este é o Crypto Wallet, uma app que você pode cadastrar e acompanhar suas criptmoedas.
-  </p>
+  <p class="lead"><%= t 'messages.welcome_app_description' %></p>
   <hr class="my-4">
-  <p>Para começar, selecione uma das opções abaixo:</p>
+  <p><%= t 'messages.welcome_choose_option' %></p>
   <p class="lead">
-    <%= link_to "#{@coins.model_name.human(count: @coins.count)}", coins_path, class: "btn btn-primary btn-lg", role: "button" %>
-    <%= link_to "#{@mining_types.model_name.human(count: @mining_types.count)}", mining_types_path, class: "btn btn-primary btn-lg", role: "button" %>
+    <%= render 'menu' %>
   </p>
 </div>
 
-<p>Alguns exemplos de como usar o ERB</p>
-<h2>Usando código Ruby no HTML com ERB</h2>
-<% name = 'Jean' %>
-<h3>Olá, <%= name %>!</h3> 
-<p>Seu nome ao contrário é <%= name.reverse.downcase.capitalize %></p>
-<hr />
+<%# TODO: Colocar um botão para ocultar todo o conteúdo abaixo e só exibir quando for clicado. Pode ser no estilo accordion %>
+<div class="ruby-references">
+  <p>Alguns exemplos de como usar o ERB</p>
+  <h2>Usando código Ruby no HTML com ERB</h2>
+  <% name = 'Jean' %>
+  <h3>Olá, <%= name %>!</h3> 
+  <p>Seu nome ao contrário é <%= name.reverse.downcase.capitalize %></p>
+  <hr />
 
-<h2>Formatação de data</h2>
-<p><strong>Através do uso de um helper:</strong> A data de hoje é: <%= format_date_br Date.today %></p>
-<p><strong>Através do uso do método <code>I18n.l()</code>:</strong> <%= l Date.today%></p>
-<hr />
+  <h2>Formatação de data</h2>
+  <p><strong>Através do uso de um helper:</strong> A data de hoje é: <%= format_date_br Date.today %></p>
+  <p><strong>Através do uso do método <code>I18n.l()</code>:</strong> <%= l Date.today%></p>
+  <hr />
 
+  <h2>Verificando o idioma que está definido como padrão</h2>
+  <p>O idioma padrão dessa aplicação é o <strong><%= t 'using_language' %></strong>.</p>
+  <hr />
 
-<h2>Verificando o idioma que está definido como padrão</h2>
-<p>O idioma padrão dessa aplicação é o <strong><%= t 'using_language' %></strong>.</p>
-<hr />
+  <h2>Verificando ambiente Rails em conjunto de helpers</h2>
+  <p>Você está em ambiente de <strong><%= rails_environment %></strong></p>
+  <hr />
 
-<h2>Verificando ambiente Rails em conjunto de helpers</h2>
-<p>Você está em ambiente de <strong><%= rails_environment %></strong></p>
-<hr />
+  <h2>Variáveis de instância/sessão</h2>
+  <p>
+    Este é o curso <strong><%= @course %></strong>, ministrado pelo professor <strong><%= @teacher %></strong>.
+  </p>
+  <hr />
 
-<h2>Variáveis de instância/sessão</h2>
-<p>
-  Este é o curso <strong><%= @course %></strong>, ministrado pelo professor <strong><%= @teacher %></strong>.
-</p>
-<hr />
-
-<h2>Acessando dados armazenados em cookies e session</h2>
-<p>
-<% if cookies[:coins_page_last_access_in]%>
-  <strong>Data do último acesso à página de Moedas:</strong> <%= cookies[:coins_page_last_access_in] %>
-<% else %>
-  <strong>Não há registro de acesso à página de Moedas</strong>
-<% end %>
-</p>
-<p>
-<% if session[:mining_type_page_last_request_in] %>
-  <strong>Data da última requisição dos Tipos de mineração:</strong> <%= session[:mining_type_page_last_request_in] %>
-<% else %>
-  <strong>Não há registro de requisição aos Tipos de mineração</strong>
-<% end %>
-</p>
-<hr />
+  <h2>Acessando dados armazenados em cookies e session</h2>
+  <p>
+  <% if cookies[:coins_page_last_access_in]%>
+    <strong>Data do último acesso à página de Moedas:</strong> <%= cookies[:coins_page_last_access_in] %>
+  <% else %>
+    <strong>Não há registro de acesso à página de Moedas</strong>
+  <% end %>
+  </p>
+  <p>
+  <% if session[:mining_type_page_last_request_in] %>
+    <strong>Data da última requisição dos Tipos de mineração:</strong> <%= session[:mining_type_page_last_request_in] %>
+  <% else %>
+    <strong>Não há registro de requisição aos Tipos de mineração</strong>
+  <% end %>
+  </p>
+  <hr />
+</div>
